@@ -5,8 +5,8 @@ from datetime import datetime
 class CreateBookingCommand:
     studio_id: int
     client_id: int
-    start_time: datetime
-    end_time: datetime
+    start_time: str
+    duration: int
 
 @dataclass
 class CancelBookingCommand:

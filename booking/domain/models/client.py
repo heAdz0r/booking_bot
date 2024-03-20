@@ -5,5 +5,5 @@ class Client:
         self.phone = phone
         self.telegram_id = telegram_id
 
-    def __repr__(self):
-        return f"Client(id={self.client_id}, name={self.name}, phone={self.phone}, telegram_id={self.telegram_id})"
+    def __str__(self):
+        return f"Client(id={self.client_id}, name='{self.name}', phone='{self.phone}', telegram_id={self.telegram_id})"

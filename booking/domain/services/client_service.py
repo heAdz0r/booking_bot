@@ -2,10 +2,12 @@ from typing import List
 from booking_bot.booking.domain.models.client import Client
 from booking_bot.booking.domain.models.booking import Booking
 from booking_bot.booking.infrastructure.repositories.client_repository import ClientRepository
+from booking_bot.booking.infrastructure.repositories.booking_repository import BookingRepository
 
 class ClientService:
-    def __init__(self, client_repository: ClientRepository):
+    def __init__(self, client_repository: ClientRepository, booking_repository: BookingRepository):
         self.client_repository = client_repository
+        self.booking_repository = booking_repository
 
     def get_client_by_id(self, client_id: int) -> Client:
         return self.client_repository.get_by_id(client_id)

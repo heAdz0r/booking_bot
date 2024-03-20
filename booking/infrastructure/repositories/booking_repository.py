@@ -16,7 +16,7 @@ class BookingRepository:
         return self.bookings.get(booking_id)
 
     def get_by_client_id(self, client_id: int) -> List[Booking]:
-        return [booking for booking in self.bookings.values() if booking.client.client_id == client_id]
+        return [booking for booking in self.bookings.values() if booking.client_id == client_id]
 
     def delete(self, booking_id: int):
         del self.bookings[booking_id]
